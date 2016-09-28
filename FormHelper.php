@@ -19,6 +19,7 @@ class FormHelper {
             if (!isset($attributes['value'])) {
                 $attributes['value'] = null;
             }
+
             if ($this->isOptionSelected($attributes['name'],
                                         $attributes['value'])) {
                 $attributes['checked'] = true;
