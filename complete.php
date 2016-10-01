@@ -71,10 +71,9 @@ function validate_form( ) {
         $input['email'] = trim($_POST['email']);
 
         if (false===filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL)) {
-            echo("Email is not valid");
-        } else {
-            echo("Email is valid");
+            $errors[]="Email is not valid";
         }
+
     } else {
         $input['email'] = '';
     }
